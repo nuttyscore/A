@@ -2,12 +2,12 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #dff5e1, #e1e9f0);
+  background: linear-gradient(to bottom, #ffffff, #e1e9f0);
   color: #333;
 }
 
 header {
-  background: linear-gradient(to right, #449147, #4b7ba1);
+  background: linear-gradient(to right, #55c259, #2d6fa5);
   color: white;
   padding: 2rem;
   text-align: center;
