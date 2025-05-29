@@ -2,7 +2,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #f7fbe8, #f0f4f8);
+  background: linear-gradient(to bottom, #dff5e1, #e1e9f0);
   color: #333;
 }
 
@@ -55,7 +55,6 @@ h2 {
 ul {
   list-style: circle;
   padding-left: 1.5rem;
-  font-size: 1rem;
 }
 
 blockquote {
