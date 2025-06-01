@@ -2,16 +2,16 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #e3f2fd, #e8f5e9);
+  background: linear-gradient(to bottom, #dcefe6, #e6eef5);
   color: #1b1b1b;
 }
 
 header {
-  background: linear-gradient(to right, #00695c, #0d47a1);
+  background: linear-gradient(to right, #0c3c2c, #002f55);
   color: white;
   padding: 2rem;
   text-align: center;
-  border-bottom: 6px solid #003f3f;
+  border-bottom: 5px solid #0a1f1a;
 }
 
 h1 {
@@ -20,7 +20,7 @@ h1 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 section {
@@ -30,63 +30,74 @@ section {
 }
 
 h2 {
-  color: #0d47a1;
+  color: #0c3c2c;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
-.imagens {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.imagens img {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-
-.imagens img:hover {
-  transform: scale(1.03);
-}
-
 ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  background: #e0f7fa;
-  margin: 0.5rem 0;
-  padding: 0.8rem;
-  border-left: 5px solid #004d40;
-  border-radius: 6px;
+  list-style: square;
+  padding-left: 1.5rem;
+  color: #2b2b2b;
 }
 
 blockquote {
   font-style: italic;
-  background: #f1f8e9;
+  background: #e2f5ec;
   padding: 1rem;
-  border-left: 5px solid #558b2f;
+  border-left: 5px solid #006e4f;
   margin: 1rem 0;
-  border-radius: 5px;
-}
-
-blockquote strong {
-  display: block;
-  margin-top: 0.5rem;
-  color: #2e7d32;
+  border-radius: 8px;
 }
 
 footer {
   text-align: center;
-  background: #1b5e20;
+  background: #1a1a1a;
   color: white;
   padding: 1rem;
   font-size: 0.9rem;
   margin-top: 2rem;
+}
+
+.imagens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.img-container {
+  position: relative;
+  width: 280px;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease;
+}
+
+.img-container:hover img {
+  transform: scale(1.05);
+}
+
+.legenda {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 47, 85, 0.8);
+  color: #fff;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  opacity: 0;
+  border-radius: 0 0 10px 10px;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.img-container:hover .legenda {
+  opacity: 1;
 }
