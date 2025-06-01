@@ -2,16 +2,16 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #dcefe6, #e6eef5);
-  color: #1b1b1b;
+  background: linear-gradient(to bottom, #e6f5ec, #d3eaf6);
+  color: #1c1c1c;
 }
 
 header {
-  background: linear-gradient(to right, #0c3c2c, #002f55);
+  background: linear-gradient(to right, #064d3c, #003f66);
   color: white;
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
-  border-bottom: 5px solid #0a1f1a;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 h1 {
@@ -19,18 +19,14 @@ h1 {
   margin: 0;
 }
 
-p {
-  font-size: 1rem;
-}
-
 section {
   padding: 2rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
 h2 {
-  color: #0c3c2c;
+  color: #064d3c;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
@@ -43,20 +39,19 @@ ul {
 
 blockquote {
   font-style: italic;
-  background: #e2f5ec;
+  background: #ddf5e4;
   padding: 1rem;
-  border-left: 5px solid #006e4f;
+  border-left: 5px solid #007855;
   margin: 1rem 0;
   border-radius: 8px;
 }
 
 footer {
   text-align: center;
-  background: #1a1a1a;
+  background: #003f66;
   color: white;
   padding: 1rem;
   font-size: 0.9rem;
-  margin-top: 2rem;
 }
 
 .imagens {
@@ -68,15 +63,15 @@ footer {
 
 .img-container {
   position: relative;
-  width: 280px;
+  width: 300px;
 }
 
 .img-container img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
 }
 
 .img-container:hover img {
@@ -88,16 +83,26 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 47, 85, 0.8);
+  background: rgba(0, 63, 102, 0.85);
   color: #fff;
   padding: 0.6rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   opacity: 0;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 12px 12px;
   transition: opacity 0.3s ease;
   text-align: center;
 }
 
 .img-container:hover .legenda {
   opacity: 1;
+}
+
+a {
+  color: #003f66;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #007855;
+  text-decoration: underline;
 }
