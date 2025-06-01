@@ -2,107 +2,106 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #e6f5ec, #d3eaf6);
-  color: #1c1c1c;
+  background-color: #f1fdfb;
+  color: #022b2d;
 }
 
 header {
-  background: linear-gradient(to right, #064d3c, #003f66);
+  background: linear-gradient(90deg, #0b3d91, #145a32);
   color: white;
-  padding: 2.5rem;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  padding: 2rem;
+  border-bottom: 5px solid #0b3d91;
 }
 
-h1 {
-  font-size: 2.8rem;
-  margin: 0;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 section {
   padding: 2rem;
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
 }
 
 h2 {
-  color: #064d3c;
-  font-size: 1.8rem;
+  color: #0b3d91;
   margin-bottom: 1rem;
 }
 
 ul {
   list-style: square;
   padding-left: 1.5rem;
-  color: #2b2b2b;
-}
-
-blockquote {
-  font-style: italic;
-  background: #ddf5e4;
-  padding: 1rem;
-  border-left: 5px solid #007855;
-  margin: 1rem 0;
-  border-radius: 8px;
 }
 
 footer {
   text-align: center;
-  background: #003f66;
+  background-color: #0b3d91;
   color: white;
   padding: 1rem;
-  font-size: 0.9rem;
+  margin-top: 2rem;
 }
 
 .imagens {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 20px;
   justify-content: center;
 }
 
 .img-container {
   position: relative;
-  width: 300px;
+  width: 280px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .img-container img {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
 .img-container:hover img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .legenda {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 63, 102, 0.85);
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
-  padding: 0.6rem;
-  font-size: 0.95rem;
-  opacity: 0;
-  border-radius: 0 0 12px 12px;
-  transition: opacity 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
   text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .img-container:hover .legenda {
   opacity: 1;
 }
 
-a {
-  color: #003f66;
-  text-decoration: none;
+blockquote {
+  background-color: #d1f2eb;
+  padding: 1rem;
+  border-left: 5px solid #145a32;
+  margin: 1rem 0;
+  font-style: italic;
 }
 
-a:hover {
-  color: #007855;
-  text-decoration: underline;
+@media (max-width: 768px) {
+  .imagens {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-container {
+    width: 90%;
+    height: 200px;
+  }
 }
