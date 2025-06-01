@@ -2,16 +2,16 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #e2f0ea, #d8e6f5);
-  color: #1a1a1a;
+  background: linear-gradient(to bottom, #e3f2fd, #e8f5e9);
+  color: #1b1b1b;
 }
 
 header {
-  background: linear-gradient(to right, #004d40, #0d47a1);
+  background: linear-gradient(to right, #00695c, #0d47a1);
   color: white;
   padding: 2rem;
   text-align: center;
-  border-bottom: 6px solid #0a0a0a;
+  border-bottom: 6px solid #003f3f;
 }
 
 h1 {
@@ -46,7 +46,7 @@ h2 {
   max-width: 700px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
 }
 
@@ -60,7 +60,7 @@ ul {
 }
 
 ul li {
-  background: #e0f2f1;
+  background: #e0f7fa;
   margin: 0.5rem 0;
   padding: 0.8rem;
   border-left: 5px solid #004d40;
@@ -69,16 +69,22 @@ ul li {
 
 blockquote {
   font-style: italic;
-  background: #f0f4c3;
+  background: #f1f8e9;
   padding: 1rem;
-  border-left: 4px solid #cddc39;
+  border-left: 5px solid #558b2f;
   margin: 1rem 0;
   border-radius: 5px;
 }
 
+blockquote strong {
+  display: block;
+  margin-top: 0.5rem;
+  color: #2e7d32;
+}
+
 footer {
   text-align: center;
-  background: #1a237e;
+  background: #1b5e20;
   color: white;
   padding: 1rem;
   font-size: 0.9rem;
