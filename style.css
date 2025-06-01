@@ -2,72 +2,83 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #ffffff, #e1e9f0);
-  color: #333;
+  background: linear-gradient(to bottom, #e2f0ea, #d8e6f5);
+  color: #1a1a1a;
 }
 
 header {
-  background: linear-gradient(to right, #55c259, #2d6fa5);
+  background: linear-gradient(to right, #004d40, #0d47a1);
   color: white;
   padding: 2rem;
   text-align: center;
-  border-bottom: 5px solid #1a1a1a;
+  border-bottom: 6px solid #0a0a0a;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin: 0;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 section {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
 
 h2 {
-  color: #2e7d32;
+  color: #0d47a1;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .imagens {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .imagens img {
-  width: 300px;
+  width: 100%;
+  max-width: 700px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
 }
 
 .imagens img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 ul {
-  list-style: circle;
-  padding-left: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #e0f2f1;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-left: 5px solid #004d40;
+  border-radius: 6px;
 }
 
 blockquote {
   font-style: italic;
-  background: #f4f4f4;
+  background: #f0f4c3;
   padding: 1rem;
-  border-left: 4px solid #4caf50;
+  border-left: 4px solid #cddc39;
   margin: 1rem 0;
+  border-radius: 5px;
 }
 
 footer {
   text-align: center;
-  background: #333;
+  background: #1a237e;
   color: white;
   padding: 1rem;
   font-size: 0.9rem;
