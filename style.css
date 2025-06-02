@@ -1,59 +1,83 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #e8f5e9;
-  color: #1b2e2f;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f7f9f6;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 header {
-  background: linear-gradient(to right, #0d47a1, #1b5e20);
-  color: white;
-  padding: 2rem;
   text-align: center;
+  margin-bottom: 40px;
 }
 
-h1 {
-  margin: 0;
+header h1 {
   font-size: 2.5rem;
+  color: #2f6a2f;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #556b2f;
+  font-style: italic;
 }
 
 section {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
+  margin-bottom: 40px;
 }
 
 h2 {
-  color: #0d47a1;
-  margin-bottom: 1rem;
+  color: #3a7d44;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #a0c36d;
+  padding-bottom: 5px;
+  font-size: 1.8rem;
 }
 
-ul {
+/* Tópicos */
+.topicos ul {
   list-style-type: disc;
-  padding-left: 1.5rem;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  color: #444;
 }
 
+/* Galeria */
 .galeria .imagens {
   display: flex;
-  gap: 1rem;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .imagem-hover {
   position: relative;
-  width: 220px;
-  height: 150px;
+  width: 300px;
   overflow: hidden;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  cursor: pointer;
+  background: #fff;
+  transition: transform 0.3s ease;
 }
 
 .imagem-hover img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
-  transition: 0.3s ease;
-  border: 2px solid #1b5e20;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
 .imagem-hover:hover img {
@@ -63,31 +87,52 @@ ul {
 .legenda {
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.75);
+  left: 0;
+  right: 0;
+  background: rgba(47, 106, 47, 0.75);
   color: #fff;
-  width: 100%;
-  text-align: center;
-  padding: 0.4rem;
-  font-size: 0.9rem;
+  padding: 10px 15px;
+  font-size: 1rem;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
 }
 
 .imagem-hover:hover .legenda {
   opacity: 1;
 }
 
-blockquote {
-  background: #dcedc8;
-  border-left: 5px solid #1b5e20;
-  padding: 1rem;
-  margin: 1rem 0;
+/* Depoimentos */
+.depoimentos blockquote {
+  background: #e6f0d4;
+  border-left: 6px solid #3a7d44;
+  padding: 15px 20px;
+  margin-bottom: 20px;
   font-style: italic;
+  color: #2f4f2f;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgb(0 0 0 / 0.05);
 }
 
+/* Footer */
 footer {
-  background-color: #1b5e20;
-  color: white;
   text-align: center;
-  padding: 1rem;
+  font-size: 0.9rem;
+  color: #999;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 650px) {
+  .galeria .imagens {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem-hover {
+    width: 90%;
+  }
 }
