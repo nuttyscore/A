@@ -96,6 +96,25 @@
   <script>
     const form = document.getElementById('formOpiniao');
     const lista = document.getElementById('listaOpinioes');
+
+    // Carrega opiniões do localStorage ao abrir a página
+    function carregarOpinioes() {
+      const opinioesSalvas = JSON.parse(localStorage.getItem('opinioes')) || [];
+      opinioesSalvas.forEach(texto => {
+        const p = document.createElement('p');
+        p.textContent = texto;
+        p.classList.add('opiniao-texto');
+        lista.appendChild(p);
+      });
+    }
+
+    // Salva uma opinião no localStorage
+    function salvarOpiniao(texto) {
+      const opinioesSalvas = JSON.parse(localStorage.getItem('opinioes')) || [];
+      opinioesSalvas.push(texto);
+      localStorage.setItem('opinioes', JSON.stringify(opinioesSalvas));
+    }
+
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       const texto = document.getElementById('textoOpiniao').value.trim();
@@ -104,9 +123,14 @@
         novaOpiniao.textContent = texto;
         novaOpiniao.classList.add('opiniao-texto');
         lista.appendChild(novaOpiniao);
+
+        salvarOpiniao(texto);
+
         form.reset();
       }
     });
+
+    carregarOpinioes();
   </script>
 </body>
-</html> 
+</html>
