@@ -13,103 +13,112 @@ body {
   background: #f9fbf7;
   color: #2e3e1f;
   line-height: 1.6;
-  padding: 0 20px 40px; /* topo padding vai pro header fixo */
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   font-size: 1.15rem;
-  position: relative;
-  z-index: 0;
+  padding: 20px;
 }
 
-/* FAIXA FIXA NO TOPO - DEGRADÊ AZUL E VERDE CHIQUE */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
+/* FAIXA NO TOPO - SEM FIXAR NA ROLAGEM */
+.top-banner {
   width: 100%;
   background: linear-gradient(135deg, #2a7f9f, #4a9a51);
-  box-shadow: 0 6px 20px rgba(42, 127, 159, 0.5);
-  padding: 35px 20px 45px; /* mais espaço vertical */
+  padding: 30px 20px 40px;
   text-align: center;
   color: #e6f0ea;
-  z-index: 1000;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 6px 20px rgba(42, 127, 159, 0.45);
+  margin-bottom: 40px;
   user-select: none;
   font-weight: 600;
   letter-spacing: 1.4px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
 }
 
-/* Conteúdo do header */
-header h1 {
-  font-size: 3.3rem;
+.top-banner h1 {
+  font-size: 3.2rem;
   font-weight: 700;
   letter-spacing: 3px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
-header .emoji {
-  font-size: 3.2rem;
+.top-banner .emoji {
+  font-size: 3.4rem;
+  filter: drop-shadow(0 0 3px rgba(0,0,0,0.3));
   user-select: none;
-  filter: drop-shadow(0 0 2px rgba(0,0,0,0.25));
 }
 
-header p {
-  font-size: 1.35rem;
+.top-banner p {
+  font-size: 1.4rem;
   font-style: italic;
   font-weight: 500;
-  margin-top: 10px;
-  max-width: 680px;
+  margin-top: 12px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   color: #cde3ca;
   text-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
-/* Ajuste do body para não ficar atrás do header fixo */
-body {
-  padding-top: 150px;
-}
-
-/* CONTEÚDO CENTRAL COM FUNDO E SOMBRA */
+/* Seções com fundo branco e sombra elegante */
 section {
   background: #fff;
-  margin-bottom: 50px;
-  padding: 30px 40px;
+  padding: 30px 35px;
   border-radius: 22px;
-  box-shadow: 0 8px 18px rgba(74, 122, 51, 0.12);
+  box-shadow: 0 8px 18px rgba(74, 122, 51, 0.14);
+  margin-bottom: 50px;
   transition: box-shadow 0.3s ease;
 }
 
 section:hover {
-  box-shadow: 0 12px 28px rgba(74, 122, 51, 0.25);
+  box-shadow: 0 12px 28px rgba(74, 122, 51, 0.28);
 }
 
-/* Títulos de seção */
+/* Títulos das seções */
 h2 {
   color: #326b31;
-  margin-bottom: 22px;
+  margin-bottom: 28px;
   border-bottom: 3px solid #69a84f;
   padding-bottom: 8px;
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
   max-width: fit-content;
 }
 
-/* Lista tópicos */
-.topicos ul {
-  list-style-type: disc;
-  padding-left: 30px;
-  font-size: 1.2rem;
-  color: #425230;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.8;
+/* Cards elegantes para tópicos */
+.topicos .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: #e8f2e6;
+  border-radius: 20px;
+  padding: 22px 25px;
+  box-shadow: 0 6px 18px rgba(74, 122, 51, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #2a5938;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: default;
+}
+
+.card:hover {
+  background: #d2e7ca;
+  box-shadow: 0 12px 30px rgba(74, 122, 51, 0.22);
+}
+
+.card .icon {
+  font-size: 2.6rem;
+  user-select: none;
+  flex-shrink: 0;
 }
 
 /* Galeria */
@@ -163,4 +172,34 @@ h2 {
   border-radius: 0 0 20px 20px;
   text-align: center;
   font-weight: 600;
-  letter-spacing: 0.05 
+  letter-spacing: 0.05em;
+}
+
+.imagem-hover:hover .legenda {
+  opacity: 1;
+}
+
+/* Depoimentos */
+.depoimentos blockquote {
+  font-style: italic;
+  color: #3d4d1c;
+  background: #e0f0d6;
+  padding: 18px 22px;
+  margin: 18px 0;
+  border-left: 6px solid #4a9a51;
+  border-radius: 14px;
+  box-shadow: 1px 2px 5px rgba(74, 122, 51, 0.12);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 1rem;
+  color: #698a4f;
+  margin-top: 20px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  user-select: none;
+}
