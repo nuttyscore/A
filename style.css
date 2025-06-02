@@ -19,7 +19,7 @@ body {
   padding: 20px;
 }
 
-/* FAIXA NO TOPO - COBRE 100% DA LARGURA */
+/* FAIXA NO TOPO - FAIXA INTEIRA (FULL WIDTH) */
 .top-banner {
   position: relative;
   left: 50%;
@@ -27,6 +27,7 @@ body {
   margin-left: -50vw;
   margin-right: -50vw;
   width: 100vw;
+
   background: linear-gradient(135deg, #2a7f9f, #4a9a51);
   padding: 30px 20px 40px;
   text-align: center;
@@ -37,7 +38,7 @@ body {
   user-select: none;
   font-weight: 600;
   letter-spacing: 1.4px;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .top-banner h1 {
@@ -125,6 +126,64 @@ h2 {
   font-size: 2.6rem;
   user-select: none;
   flex-shrink: 0;
+}
+
+/* Galeria */
+.galeria .imagens {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imagem-hover {
+  position: relative;
+  width: 320px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  background: #f9fdf9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagem-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 28px rgba(0, 0, 0, 0.15);
+}
+
+.imagem-hover img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.imagem-hover:hover img {
+  transform: scale(1.1);
+}
+
+.legenda {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(50, 135, 90, 0.85);
+  color: #e6f0ea;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.imagem-hover:hover .legenda {
+  opacity: 1;
 }
 
 /* Depoimentos */
