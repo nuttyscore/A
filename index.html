@@ -77,10 +77,36 @@
         "A sustentabilidade é a chave para o futuro. Preservar a natureza e cuidar dos animais é uma responsabilidade de todos nós, do campo à cidade." – Marcos, 18 anos, voluntário ambiental.
       </blockquote>
     </section>
+
+    <!-- Nova seção com caixa de opiniões -->
+    <section class="opiniao">
+      <h2>📝 Deixe sua opinião</h2>
+      <form id="formOpiniao">
+        <textarea id="textoOpiniao" placeholder="Escreva sua opinião aqui..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="listaOpinioes"></div>
+    </section>
   </main>
 
   <footer>
     <p>Projeto Agrinho 2025 – Cleverson da Luz Pereira da Cruz – 1F</p>
   </footer>
+
+  <script>
+    const form = document.getElementById('formOpiniao');
+    const lista = document.getElementById('listaOpinioes');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const texto = document.getElementById('textoOpiniao').value.trim();
+      if(texto.length > 0){
+        const novaOpiniao = document.createElement('p');
+        novaOpiniao.textContent = texto;
+        novaOpiniao.classList.add('opiniao-texto');
+        lista.appendChild(novaOpiniao);
+        form.reset();
+      }
+    });
+  </script>
 </body>
 </html>

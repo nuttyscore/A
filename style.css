@@ -115,123 +115,158 @@ h2 {
   color: #2a5938;
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
   cursor: default;
+  user-select: none;
 }
 
 .card:hover {
-  background: #d2e7ca;
-  box-shadow: 0 12px 30px rgba(74, 122, 51, 0.22);
+  background: #cee4bb;
+  box-shadow: 0 10px 26px rgba(74, 122, 51, 0.2);
 }
 
-.card .icon {
-  font-size: 2.6rem;
+.icon {
+  font-size: 3.6rem;
   user-select: none;
   flex-shrink: 0;
 }
 
-/* Galeria */
+/* Galeria de imagens com hover */
 .galeria .imagens {
   display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
+  gap: 25px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .imagem-hover {
   position: relative;
-  width: 320px;
+  border-radius: 22px;
   overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+  max-width: 340px;
+  flex-grow: 1;
+  box-shadow: 0 6px 14px rgba(74, 122, 51, 0.12);
   cursor: pointer;
-  background: #f9fdf9;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .imagem-hover:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 28px rgba(0, 0, 0, 0.15);
+  transform: scale(1.08);
+  box-shadow: 0 14px 36px rgba(74, 122, 51, 0.25);
 }
 
 .imagem-hover img {
-  display: block;
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-}
-
-.imagem-hover:hover img {
-  transform: scale(1.1);
+  height: auto;
+  display: block;
+  border-radius: 22px;
+  user-select: none;
+  pointer-events: none;
 }
 
 .legenda {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(50, 135, 90, 0.85);
-  color: #e6f0ea;
-  padding: 15px 20px;
-  font-size: 1.1rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 0 0 20px 20px;
+  width: 100%;
+  background: rgba(50, 107, 49, 0.85);
+  color: #e4f0e2;
+  padding: 14px 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
   text-align: center;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  user-select: none;
 }
 
-.imagem-hover:hover .legenda {
-  opacity: 1;
-}
-
-/* Depoimentos */
+/* Depoimentos estilo bloco */
 .depoimentos blockquote {
+  background: #d9f1c9;
+  border-left: 7px solid #4a7e29;
+  padding: 22px 28px;
   font-style: italic;
-  color: #3d3d3d;
-  border-left: 5px solid #4a9a51;
-  padding-left: 18px;
-  margin: 18px 0;
-  font-weight: 600;
-  font-size: 1.2rem;
-  max-width: 800px;
+  font-weight: 500;
+  color: #2d4e1c;
+  margin-bottom: 30px;
+  border-radius: 12px;
   user-select: none;
   line-height: 1.5;
-  background: #f4f9f3;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(74, 122, 81, 0.1);
+}
+
+/* Nova seção: opinião */
+
+.opiniao textarea {
+  width: 100%;
+  min-height: 120px;
+  border-radius: 16px;
+  border: 2px solid #7aaa3d;
+  padding: 14px 20px;
+  font-size: 1.15rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.opiniao textarea:focus {
+  outline: none;
+  border-color: #326b31;
+  background: #e6f0d7;
+}
+
+.opiniao button {
+  background: #4a7e29;
+  border: none;
+  color: #f0f6d2;
+  font-size: 1.2rem;
+  padding: 14px 28px;
+  margin-top: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 5px 14px rgba(74, 122, 41, 0.6);
+  user-select: none;
+  transition: background 0.3s ease;
+}
+
+.opiniao button:hover {
+  background: #326b31;
+}
+
+#listaOpinioes {
+  margin-top: 30px;
+  background: #f0f6d2;
+  border-radius: 18px;
+  padding: 20px 25px;
+  box-shadow: inset 0 3px 8px rgba(50, 107, 49, 0.15);
+  max-height: 300px;
+  overflow-y: auto;
+  user-select: none;
+}
+
+.opiniao-texto {
+  background: #cee4bb;
+  margin-bottom: 14px;
+  padding: 14px 20px;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(74, 122, 51, 0.12);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2a5938;
 }
 
 /* Rodapé */
 footer {
   text-align: center;
-  font-size: 1.1rem;
-  color: #617a4d;
-  padding: 18px 10px 8px;
-  border-top: 2px solid #a1bf86;
+  font-size: 1rem;
+  color: #7a8e5e;
+  font-style: italic;
+  margin-top: 25px;
   user-select: none;
-  font-weight: 600;
-  letter-spacing: 0.05em;
 }
 
-/* Responsividade para telas pequenas */
-@media (max-width: 600px) {
-  body {
-    padding: 15px 10px;
-    font-size: 1rem;
-  }
-
-  .top-banner h1 {
-    font-size: 2.3rem;
-  }
-
+/* Responsividade */
+@media (max-width: 650px) {
   .topicos .cards {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
-  .imagem-hover {
-    width: 100%;
+  .galeria .imagens {
+    flex-direction: column;
   }
 }
