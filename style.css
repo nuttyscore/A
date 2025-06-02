@@ -1,232 +1,35 @@
-/* Reset básico */
-* {
+/* Remove margens e paddings do html e body para evitar deslocamento */
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
+  overflow-x: hidden; /* Evita barra de rolagem horizontal */
+  width: 100%;
 }
 
+/* Corpo da página */
 body {
   background: #f9fbf7;
   color: #2e3e1f;
   line-height: 1.6;
-  /* Remove largura máxima e centralização para permitir banner 100% */
   font-size: 1.15rem;
-  padding: 20px;
-  margin: 0; /* Remove margem padrão do body */
+  padding: 20px 0; /* só padding vertical */
+  margin: 0 auto;
+  max-width: 1200px; /* limita largura do conteúdo */
+  font-family: Arial, sans-serif;
 }
 
-/* FAIXA NO TOPO - agora ocupa 100% da tela e um pouco pra cima */
+/* Banner no topo */
 .top-banner {
-  width: 100vw; /* 100% da largura da viewport */
-  position: relative; /* para margem negativa funcionar */
+  width: 100%; /* ocupa 100% do body sem causar overflow */
+  padding: 40px 20px;
+  margin-top: -20px; /* sobe o banner um pouco */
   background: linear-gradient(135deg, #2a7f9f, #4a9a51);
-  padding: 40px 20px 40px;
-  text-align: center;
-  color: #e6f0ea;
   border-radius: 0 0 30px 30px;
   box-shadow: 0 6px 20px rgba(42, 127, 159, 0.45);
-  
-  margin-top: -20px; /* sobe o banner um pouco */
-  margin-bottom: 40px;
-
+  color: #e6f0ea;
+  text-align: center;
   user-select: none;
   font-weight: 600;
   letter-spacing: 1.4px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.top-banner h1 {
-  font-size: 3.2rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  max-width: 100vw; /* para não quebrar */
-}
-
-.top-banner .emoji {
-  font-size: 3.4rem;
-  filter: drop-shadow(0 0 3px rgba(0,0,0,0.3));
-  user-select: none;
-}
-
-.top-banner p {
-  font-size: 1.4rem;
-  font-style: italic;
-  font-weight: 500;
-  margin-top: 12px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #cde3ca;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
-}
-
-/* Seções com fundo branco e sombra elegante */
-section {
-  background: #fff;
-  padding: 30px 35px;
-  border-radius: 22px;
-  box-shadow: 0 8px 18px rgba(74, 122, 51, 0.14);
-  margin-bottom: 50px;
-  transition: box-shadow 0.3s ease;
-}
-
-section:hover {
-  box-shadow: 0 12px 28px rgba(74, 122, 51, 0.28);
-}
-
-/* Títulos das seções */
-h2 {
-  color: #326b31;
-  margin-bottom: 28px;
-  border-bottom: 3px solid #69a84f;
-  padding-bottom: 8px;
-  font-size: 2.2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  max-width: fit-content;
-}
-
-/* Cards elegantes para tópicos */
-.topicos .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
-}
-
-.card {
-  background: #e8f2e6;
-  border-radius: 20px;
-  padding: 22px 25px;
-  box-shadow: 0 6px 18px rgba(74, 122, 51, 0.1);
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  font-size: 1.18rem;
-  font-weight: 600;
-  color: #2a5938;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
-  cursor: default;
-}
-
-.card:hover {
-  background: #d2e7ca;
-  box-shadow: 0 12px 30px rgba(74, 122, 51, 0.22);
-}
-
-.card .icon {
-  font-size: 2.6rem;
-  user-select: none;
-  flex-shrink: 0;
-}
-
-/* Galeria */
-.galeria .imagens {
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.imagem-hover {
-  position: relative;
-  width: 320px;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  background: #f9fdf9;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.imagem-hover:hover {
-  transform: scale(1.05);
-  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.15);
-}
-
-.imagem-hover img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  display: block;
-  user-select: none;
-  border-radius: 20px;
-}
-
-.legenda {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 12px 16px;
-  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
-  color: #f5f5f5;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 0 0 20px 20px;
-  user-select: none;
-  text-align: center;
-}
-
-/* Depoimentos */
-.depoimentos blockquote {
-  background: #e1f1d9;
-  border-left: 8px solid #4a9a51;
-  margin: 20px auto;
-  max-width: 720px;
-  font-style: italic;
-  font-size: 1.3rem;
-  padding: 18px 28px;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(74, 122, 51, 0.15);
-  color: #2e3e1f;
-  user-select: none;
-}
-
-/* Rodapé simples */
-footer {
-  text-align: center;
-  padding: 24px 10px;
-  font-size: 1.15rem;
-  color: #667a52;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  user-select: none;
-  margin-bottom: 10px;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 500px) {
-  .top-banner h1 {
-    font-size: 2.5rem;
-    gap: 12px;
-  }
-
-  .top-banner p {
-    font-size: 1rem;
-    max-width: 90vw;
-  }
-
-  .topicos .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .imagem-hover {
-    width: 100%;
-  }
-
-  section {
-    padding: 24px 18px;
-  }
+  box-sizing: border-box; /* inclui padding na largura */
 }
