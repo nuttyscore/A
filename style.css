@@ -19,17 +19,11 @@ body {
   padding: 20px;
 }
 
-/* FAIXA NO TOPO - FAIXA INTEIRA (FULL WIDTH) */
+/* FAIXA NO TOPO - SEM FIXAR NA ROLAGEM */
 .top-banner {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-
+  width: 100%;
   background: linear-gradient(135deg, #2a7f9f, #4a9a51);
-  padding: 30px 20px 40px;
+  padding: 50px 20px 50px; /* aumentado para faixa mais alta */
   text-align: center;
   color: #e6f0ea;
   border-radius: 0 0 30px 30px;
@@ -38,7 +32,10 @@ body {
   user-select: none;
   font-weight: 600;
   letter-spacing: 1.4px;
-  z-index: 1000;
+  min-height: 180px; /* altura mínima maior */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .top-banner h1 {
