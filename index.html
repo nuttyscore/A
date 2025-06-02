@@ -8,36 +8,46 @@
 </head>
 <body>
 
-  <section>
-    <h1>Depoimento</h1>
-    <p>
-      “Minha experiência foi incrível! Aprendi muito e conheci pessoas que me inspiram todos os dias. Cada momento valeu muito a pena.”
-    </p>
-  </section>
+  <header>
+    <h1>Depoimento Inspirador</h1>
+  </header>
 
-  <section>
-    <h2>Mais Informações</h2>
-    <p>
-      Caso queira saber mais sobre o projeto ou entrar em contato, fique à vontade para mandar sua mensagem na caixa de opiniões abaixo. Sua opinião é muito importante para nós!
-    </p>
-  </section>
+  <main>
+    <section id="depoimento">
+      <p>
+        “Minha experiência foi incrível! Aprendi muito e conheci pessoas que me inspiram todos os dias. Cada momento valeu muito a pena.”
+      </p>
+    </section>
 
-  <section class="opiniao">
-    <h2>📝 Deixe sua Opinião</h2>
-    <form id="form-opiniao">
-      <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
-      <textarea id="comentario" name="comentario" placeholder="Escreva sua opinião aqui..." required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <div id="resposta"></div>
-  </section>
+    <section id="mais-informacoes">
+      <h2>Mais Informações</h2>
+      <p>
+        Este projeto visa compartilhar histórias reais que motivam e inspiram todos os dias. Queremos criar uma comunidade que se apoie e cresça junta.
+      </p>
+      <p>
+        Você já participou de alguma experiência que mudou sua vida? Gostaria de compartilhar?
+      </p>
+    </section>
+
+    <section id="opiniao">
+      <h2>📝 Deixe sua Opinião</h2>
+      <form id="form-opiniao">
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+        <textarea id="comentario" name="comentario" placeholder="Escreva sua opinião aqui..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="resposta"></div>
+    </section>
+  </main>
 
   <script>
     document.getElementById('form-opiniao').addEventListener('submit', function(e) {
       e.preventDefault();
+
       const nome = document.getElementById('nome').value.trim();
       const comentario = document.getElementById('comentario').value.trim();
-      if(nome && comentario){
+
+      if (nome && comentario) {
         const resposta = document.getElementById('resposta');
         resposta.innerHTML = `<p><strong>${nome}</strong> disse:<br>${comentario}</p>`;
         this.reset();

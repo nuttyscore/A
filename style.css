@@ -1,53 +1,83 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   margin: 20px;
-  background: #f4f4f4;
-}
-section {
-  background: #fff;
-  padding: 15px 20px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-h1, h2 {
   color: #333;
 }
-p {
-  line-height: 1.6;
-  color: #555;
+
+header h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 30px;
 }
 
-/* Form */
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+#depoimento p {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
+  border-left: 5px solid #007bff;
+  padding-left: 15px;
+}
+
+#mais-informacoes h2,
+#opiniao h2 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+#mais-informacoes p {
+  line-height: 1.5;
+}
+
 form {
   display: flex;
   flex-direction: column;
 }
+
 input[type="text"], textarea {
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 1rem;
-  border-radius: 4px;
+  border-radius: 5px;
   border: 1px solid #ccc;
   resize: vertical;
 }
+
 button {
-  width: 120px;
+  width: 100px;
   padding: 10px;
   font-size: 1rem;
+  color: white;
   background-color: #007bff;
   border: none;
-  border-radius: 4px;
-  color: white;
+  border-radius: 5px;
   cursor: pointer;
   align-self: flex-start;
+  transition: background-color 0.3s ease;
 }
+
 button:hover {
   background-color: #0056b3;
 }
+
 #resposta p {
-  background: #e1f5fe;
-  padding: 10px;
+  background-color: #d9edf7;
+  padding: 12px;
   border-radius: 5px;
-  color: #0277bd;
+  color: #31708f;
+  margin-top: 15px;
+  white-space: pre-wrap;
 }
