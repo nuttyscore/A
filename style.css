@@ -19,20 +19,23 @@ body {
   padding: 20px;
 }
 
-/* FAIXA NO TOPO - SEM FIXAR NA ROLAGEM */
 .top-banner {
   width: 100%;
   background: linear-gradient(135deg, #2a7f9f, #4a9a51);
-  padding: 50px 20px 50px; /* aumentado para faixa mais alta */
+  padding: 40px 20px 40px; /* Mantém o tamanho confortável */
   text-align: center;
   color: #e6f0ea;
   border-radius: 0 0 30px 30px;
   box-shadow: 0 6px 20px rgba(42, 127, 159, 0.45);
-  margin-bottom: 40px;
+  
+  /* Remove margem inferior e adiciona margem negativa no topo pra subir */
+  margin: -30px 0 40px 0;
+  
   user-select: none;
   font-weight: 600;
   letter-spacing: 1.4px;
-  min-height: 180px; /* altura mínima maior */
+  min-height: 150px;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
