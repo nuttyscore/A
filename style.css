@@ -15,10 +15,14 @@ body {
   margin: 0 auto;
 }
 
-/* Faixa azul-verde no topo */
+/* Faixa azul-verde no topo com largura total da tela */
 .faixa-topo {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   width: 100vw;
-  max-width: 100%;
   background: linear-gradient(90deg, #0d6e99, #2f6a2f);
   color: #fff;
   padding: 20px 0;
@@ -28,6 +32,7 @@ body {
   gap: 15px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.15);
   border-radius: 0 0 15px 15px;
+  z-index: 10;
 }
 
 .faixa-topo h1 {
