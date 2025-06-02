@@ -1,8 +1,7 @@
 body {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #e8f5e9, #e3f2fd);
+  font-family: Arial, sans-serif;
+  background-color: #e8f5e9;
   color: #1b2e2f;
 }
 
@@ -11,36 +10,30 @@ header {
   color: white;
   padding: 2rem;
   text-align: center;
-  border-bottom: 5px solid #0c1c0d;
 }
 
 h1 {
-  font-size: 2.5rem;
   margin: 0;
-}
-
-p {
-  font-size: 1rem;
+  font-size: 2.5rem;
 }
 
 section {
-  padding: 2rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
+  padding: 2rem;
 }
 
 h2 {
-  color: #1b5e20;
+  color: #0d47a1;
   margin-bottom: 1rem;
 }
 
 ul {
   list-style-type: disc;
   padding-left: 1.5rem;
-  line-height: 1.8;
 }
 
-.imagens {
+.galeria .imagens {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -49,15 +42,18 @@ ul {
 
 .imagem-hover {
   position: relative;
-  width: 300px;
+  width: 220px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .imagem-hover img {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease;
+  border: 2px solid #1b5e20;
 }
 
 .imagem-hover:hover img {
@@ -67,15 +63,14 @@ ul {
 .legenda {
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   color: #fff;
   width: 100%;
-  padding: 0.5rem;
-  font-size: 0.9rem;
   text-align: center;
+  padding: 0.4rem;
+  font-size: 0.9rem;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 0 0 12px 12px;
+  transition: opacity 0.3s;
 }
 
 .imagem-hover:hover .legenda {
@@ -83,18 +78,16 @@ ul {
 }
 
 blockquote {
-  font-style: italic;
-  background: #f1f8e9;
+  background: #dcedc8;
+  border-left: 5px solid #1b5e20;
   padding: 1rem;
-  border-left: 4px solid #1b5e20;
   margin: 1rem 0;
+  font-style: italic;
 }
 
 footer {
-  text-align: center;
-  background: #1b5e20;
+  background-color: #1b5e20;
   color: white;
+  text-align: center;
   padding: 1rem;
-  font-size: 0.9rem;
-  margin-top: 2rem;
 }
