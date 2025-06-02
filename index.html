@@ -2,50 +2,48 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projeto Campo e Cidade</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Depoimento e Opiniões</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main>
-    <!-- Depoimentos -->
-    <section class="depoimentos">
-      <h2>📣 Depoimentos</h2>
-      <p>
-        "Esse projeto me ajudou a entender melhor a importância do campo na vida da cidade. Agora valorizo mais os produtos locais."
-        <br />— Maria Souza, moradora da cidade
-      </p>
-      <p>
-        "Conectar produtores rurais e consumidores é essencial. Espero que mais iniciativas assim aconteçam!"
-        <br />— João Pereira, agricultor familiar
-      </p>
-    </section>
 
-    <!-- Mais Informações -->
-    <section class="mais-informacoes">
-      <h2>📚 Mais Informações</h2>
-      <p>
-        Nosso projeto visa fortalecer a conexão entre o campo e a cidade, promovendo a valorização dos produtores rurais e a sustentabilidade.  
-        Estamos sempre abertos a sugestões para melhorar essa união.
-      </p>
-      <p>
-        Você pode contribuir compartilhando sua opinião ou experiência com a gente. Seu feedback é muito importante!
-      </p>
-    </section>
+  <section>
+    <h1>Depoimento</h1>
+    <p>
+      “Minha experiência foi incrível! Aprendi muito e conheci pessoas que me inspiram todos os dias. Cada momento valeu muito a pena.”
+    </p>
+  </section>
 
-    <!-- Caixa de Opiniões -->
-    <section class="opiniao">
-      <h2>📝 Deixe sua Opinião</h2>
-      <form id="form-opiniao" action="#" method="POST">
-        <label for="nome">Nome:</label><br />
-        <input type="text" id="nome" name="nome" placeholder="Seu nome" required /><br /><br />
+  <section>
+    <h2>Mais Informações</h2>
+    <p>
+      Caso queira saber mais sobre o projeto ou entrar em contato, fique à vontade para mandar sua mensagem na caixa de opiniões abaixo. Sua opinião é muito importante para nós!
+    </p>
+  </section>
 
-        <label for="comentario">Comentário:</label><br />
-        <textarea id="comentario" name="comentario" rows="5" placeholder="Escreva sua opinião aqui..." required></textarea><br /><br />
+  <section class="opiniao">
+    <h2>📝 Deixe sua Opinião</h2>
+    <form id="form-opiniao">
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+      <textarea id="comentario" name="comentario" placeholder="Escreva sua opinião aqui..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="resposta"></div>
+  </section>
 
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
+  <script>
+    document.getElementById('form-opiniao').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const comentario = document.getElementById('comentario').value.trim();
+      if(nome && comentario){
+        const resposta = document.getElementById('resposta');
+        resposta.innerHTML = `<p><strong>${nome}</strong> disse:<br>${comentario}</p>`;
+        this.reset();
+      }
+    });
+  </script>
+
 </body>
 </html>
