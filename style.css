@@ -1,4 +1,4 @@
-/* Reset básico */
+ /* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -13,13 +13,13 @@ body {
   background: #f9fbf7;
   color: #2e3e1f;
   line-height: 1.6;
-  max-width: 1200px;
+  max-width: 1200px; /* limite para texto */
   margin: 0 auto 40px;
   font-size: 1.15rem;
   padding: 20px;
 }
 
-/* FAIXA NO TOPO */
+/* FAIXA NO TOPO - LARGURA TOTAL + UM POUCO MAIS PARA CIMA */
 .top-banner {
   position: relative;
   left: 50%;
@@ -37,7 +37,7 @@ body {
   user-select: none;
   font-weight: 600;
   letter-spacing: 1.4px;
-  margin-top: -20px;
+  margin-top: -20px; /* sobe um pouco */
   z-index: 10;
 }
 
@@ -69,7 +69,7 @@ body {
   text-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
-/* Seções com fundo branco e sombra */
+/* Seções com fundo branco e sombra elegante */
 section {
   background: #fff;
   padding: 30px 35px;
@@ -83,7 +83,7 @@ section:hover {
   box-shadow: 0 12px 28px rgba(74, 122, 51, 0.28);
 }
 
-/* Títulos */
+/* Títulos das seções */
 h2 {
   color: #326b31;
   margin-bottom: 28px;
@@ -95,7 +95,7 @@ h2 {
   max-width: fit-content;
 }
 
-/* Cards */
+/* Cards elegantes para tópicos */
 .topicos .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -112,167 +112,161 @@ h2 {
   gap: 18px;
   font-size: 1.18rem;
   font-weight: 600;
-  color: #2c5534;
+  color: #2a5938;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: default;
   user-select: none;
-  transition: background 0.25s ease;
 }
 
 .card:hover {
-  background: #ccddb3;
+  background: #cee4bb;
+  box-shadow: 0 10px 26px rgba(74, 122, 51, 0.2);
 }
 
-/* Ícone dentro do card */
 .icon {
-  font-size: 2.8rem;
+  font-size: 3.6rem;
   user-select: none;
-  color: #3f6d26;
+  flex-shrink: 0;
 }
 
-/* Galeria */
+/* Galeria de imagens com hover */
 .galeria .imagens {
   display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
+  gap: 25px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .imagem-hover {
   position: relative;
-  border-radius: 18px;
+  border-radius: 22px;
   overflow: hidden;
-  max-width: 380px;
-  box-shadow: 0 6px 20px rgba(42, 127, 159, 0.2);
+  max-width: 340px;
+  flex-grow: 1;
+  box-shadow: 0 6px 14px rgba(74, 122, 51, 0.12);
   cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.imagem-hover img {
-  display: block;
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .imagem-hover:hover {
   transform: scale(1.08);
-  z-index: 5;
+  box-shadow: 0 14px 36px rgba(74, 122, 51, 0.25);
+}
+
+.imagem-hover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 22px;
+  user-select: none;
+  pointer-events: none;
 }
 
 .legenda {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   background: rgba(50, 107, 49, 0.85);
-  color: #d2e3b8;
-  padding: 14px 20px;
-  font-size: 1.06rem;
+  color: #e4f0e2;
+  padding: 14px 12px;
+  font-size: 1.05rem;
   font-weight: 600;
+  text-align: center;
   user-select: none;
-  opacity: 0;
-  transition: opacity 0.25s ease;
 }
 
-.imagem-hover:hover .legenda {
-  opacity: 1;
-}
-
-/* Depoimentos */
+/* Depoimentos estilo bloco */
 .depoimentos blockquote {
+  background: #d9f1c9;
+  border-left: 7px solid #4a7e29;
+  padding: 22px 28px;
   font-style: italic;
-  font-weight: 600;
-  background: #e3f1d6;
-  padding: 18px 28px;
-  border-left: 7px solid #4a9a51;
-  border-radius: 14px;
-  margin-bottom: 24px;
-  color: #395929;
-  user-select: text;
-  transition: background-color 0.3s ease;
+  font-weight: 500;
+  color: #2d4e1c;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  user-select: none;
+  line-height: 1.5;
 }
 
-.depoimentos blockquote:hover {
-  background: #c5e5a2;
-}
+/* Nova seção: opinião */
 
-/* Opinião */
 .opiniao textarea {
   width: 100%;
-  min-height: 110px;
-  padding: 16px 18px;
-  border-radius: 14px;
-  border: 2.6px solid #4a9a51;
+  min-height: 120px;
+  border-radius: 16px;
+  border: 2px solid #7aaa3d;
+  padding: 14px 20px;
   font-size: 1.15rem;
-  font-weight: 500;
+  font-family: inherit;
   resize: vertical;
-  outline-offset: 2px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: border-color 0.25s ease;
+  transition: border-color 0.3s ease;
 }
 
 .opiniao textarea:focus {
+  outline: none;
   border-color: #326b31;
+  background: #e6f0d7;
 }
 
 .opiniao button {
-  margin-top: 14px;
-  padding: 12px 24px;
-  background: #2a7f9f;
-  color: #e6f0ea;
-  font-size: 1.2rem;
-  font-weight: 700;
+  background: #4a7e29;
   border: none;
-  border-radius: 18px;
+  color: #f0f6d2;
+  font-size: 1.2rem;
+  padding: 14px 28px;
+  margin-top: 15px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.25s ease;
+  font-weight: 700;
+  box-shadow: 0 5px 14px rgba(74, 122, 41, 0.6);
+  user-select: none;
+  transition: background 0.3s ease;
 }
 
 .opiniao button:hover {
-  background: #235e72;
+  background: #326b31;
 }
 
 #listaOpinioes {
-  margin-top: 22px;
-  font-style: italic;
-  color: #42672e;
+  margin-top: 30px;
+  background: #f0f6d2;
+  border-radius: 18px;
+  padding: 20px 25px;
+  box-shadow: inset 0 3px 8px rgba(50, 107, 49, 0.15);
+  max-height: 300px;
+  overflow-y: auto;
+  user-select: none;
 }
 
 .opiniao-texto {
-  background: #d9e6c6;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(50,107,49,0.15);
+  background: #cee4bb;
+  margin-bottom: 14px;
+  padding: 14px 20px;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(74, 122, 51, 0.12);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2a5938;
 }
 
-/* Footer */
+/* Rodapé */
 footer {
   text-align: center;
-  color: #597750;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-  padding: 16px 0 10px;
-  user-select: none;
   font-size: 1rem;
+  color: #7a8e5e;
+  font-style: italic;
+  margin-top: 25px;
+  user-select: none;
 }
 
 /* Responsividade */
-@media (max-width: 780px) {
-  .top-banner h1 {
-    font-size: 2.5rem;
-    gap: 15px;
+@media (max-width: 650px) {
+  .topicos .cards {
+    grid-template-columns: 1fr;
   }
 
-  .card {
-    font-size: 1.04rem;
-  }
-
-  .imagem-hover img {
-    height: 180px;
-  }
-
-  h2 {
-    font-size: 1.8rem;
+  .galeria .imagens {
+    flex-direction: column;
   }
 }
