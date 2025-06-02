@@ -3,57 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Depoimento e Opiniões</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>🌿🌆 Conexão Campo-Cidade</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header>
-    <h1>Depoimento Inspirador</h1>
+  <header class="top-banner">
+    <h1>
+      <span class="emoji">🌿</span>
+      Conexão Campo-Cidade
+      <span class="emoji">🌆</span>
+    </h1>
+    <p>Celebrando a união entre o campo e a cidade com respeito e sustentabilidade.</p>
   </header>
 
   <main>
-    <section id="depoimento">
-      <p>
-        “Minha experiência foi incrível! Aprendi muito e conheci pessoas que me inspiram todos os dias. Cada momento valeu muito a pena.”
-      </p>
+    <section class="topicos">
+      <h2>🌱 Tópicos Importantes</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🌾</div>
+          <p>O campo fornece alimentos e matérias-primas essenciais à cidade.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🏙️</div>
+          <p>A cidade contribui com tecnologia e serviços para o campo crescer.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🤝</div>
+          <p>É preciso valorizar quem trabalha na terra e respeitar os animais.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🌳</div>
+          <p>A sustentabilidade deve ser prioridade em todas as ações.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🐖</div>
+          <p>Animais de criação merecem cuidados adequados e respeito.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⚖️</div>
+          <p>O equilíbrio entre produção rural e urbana é fundamental para o desenvolvimento.</p>
+        </article>
+        <article class="card">
+          <div class="icon">💡</div>
+          <p>Inovações tecnológicas ajudam a melhorar a vida no campo e na cidade.</p>
+        </article>
+      </div>
     </section>
 
-    <section id="mais-informacoes">
-      <h2>Mais Informações</h2>
-      <p>
-        Este projeto visa compartilhar histórias reais que motivam e inspiram todos os dias. Queremos criar uma comunidade que se apoie e cresça junta.
-      </p>
-      <p>
-        Você já participou de alguma experiência que mudou sua vida? Gostaria de compartilhar?
-      </p>
+    <section class="galeria">
+      <h2>🐖🐓 Galeria</h2>
+      <div class="imagens">
+        <div class="imagem-hover">
+          <img src="https://www.worldanimalprotection.org.br/cdn-cgi/image/width=800,format=auto,fit=cover/siteassets/article/factory_farmed_pigs.jpg" alt="Porcos em cativeiro" />
+          <div class="legenda">Porcos confinados em fazendas industriais</div>
+        </div>
+        <div class="imagem-hover">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMcXTerND-0M04XWyizeuWfAmElSzDg7p8gOpwIXGAxcZ_iYuZLtpxoniEPWWttS6O15A&usqp=CAU" alt="Galinha poedeira" />
+          <div class="legenda">Galinha poedeira em cativeiro</div>
+        </div>
+      </div>
     </section>
 
-    <section id="opiniao">
-      <h2>📝 Deixe sua Opinião</h2>
-      <form id="form-opiniao">
-        <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
-        <textarea id="comentario" name="comentario" placeholder="Escreva sua opinião aqui..." required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-      <div id="resposta"></div>
+    <section class="depoimentos">
+      <h2>📣 Depoimentos </h2>
+      <blockquote>
+        "Cresci na zona rural e sei o quanto o trabalho no campo exige dedicação e amor. Cada alimento que chega na cidade carrega a história de muita luta." – Carlos, 17 anos, agricultor mirim.
+      </blockquote>
+      <blockquote>
+        "Morar na cidade me fez perceber o quanto dependemos do campo. Valorizar o produtor rural é fundamental para garantir comida de qualidade para todos." – Júlia, 16 anos, estudante.
+      </blockquote>
+      <blockquote>
+        "A sustentabilidade é a chave para o futuro. Preservar a natureza e cuidar dos animais é uma responsabilidade de todos nós, do campo à cidade." – Marcos, 18 anos, voluntário ambiental.
+      </blockquote>
     </section>
   </main>
 
-  <script>
-    document.getElementById('form-opiniao').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const nome = document.getElementById('nome').value.trim();
-      const comentario = document.getElementById('comentario').value.trim();
-
-      if (nome && comentario) {
-        const resposta = document.getElementById('resposta');
-        resposta.innerHTML = `<p><strong>${nome}</strong> disse:<br>${comentario}</p>`;
-        this.reset();
-      }
-    });
-  </script>
-
+  <footer>
+    <p>Projeto Agrinho 2025 – Cleverson da Luz Pereira da Cruz – 1F</p>
+  </footer>
 </body>
 </html>
