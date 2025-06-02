@@ -1,4 +1,5 @@
-/* Reset básico */
+/* CSS Completo */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +14,7 @@ body {
   padding: 20px;
 }
 
-/* Banner superior */
+/* Banner */
 .top-banner {
   background: linear-gradient(45deg, #87d37c, #4a9a51);
   color: #e0f0d6;
@@ -55,7 +56,7 @@ body {
   user-select: none;
 }
 
-/* Cards dos tópicos */
+/* Cards */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -140,7 +141,7 @@ body {
   text-align: center;
 }
 
-/* Seção de depoimentos com scroll */
+/* Depoimentos */
 .depoimentos {
   margin-top: 60px;
 }
@@ -151,16 +152,6 @@ body {
   margin-bottom: 20px;
   user-select: none;
   text-align: center;
-}
-
-.depoimentos .depoimentos-scroll {
-  max-height: 320px;  /* altura fixa para scroll */
-  overflow-y: auto;
-  padding-right: 12px;
-  border: 1px solid #4a9a51;
-  border-radius: 14px;
-  background: #f1fae1;
-  box-shadow: inset 0 0 10px rgba(74, 154, 81, 0.15);
 }
 
 .depoimentos blockquote {
@@ -180,6 +171,27 @@ body {
 
 .depoimentos blockquote:hover {
   background-color: #d4e8b5;
+}
+
+/* Seção extra pra rolar mais */
+.mais-conteudo {
+  margin-top: 70px;
+  background: #d4e8b5;
+  padding: 30px 20px;
+  border-radius: 16px;
+  color: #2b4a10;
+}
+
+.mais-conteudo h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mais-conteudo p {
+  max-width: 600px;
+  margin: 12px auto;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 /* Rodapé */
