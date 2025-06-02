@@ -3,67 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Exemplo Tooltip</title>
-  <style>
-    /* Estilo do container tooltip */
-    .tooltip {
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
-      color: #004aad;
-      font-weight: bold;
-    }
-
-    /* Texto da tooltip - inicialmente invisível */
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 160px;
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      border-radius: 6px;
-      padding: 8px;
-      position: absolute;
-      z-index: 1;
-      bottom: 125%; /* posiciona acima */
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      transition: opacity 0.3s;
-      pointer-events: none; /* evita interferência */
-      font-size: 14px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-
-    /* Triângulo da tooltip */
-    .tooltip .tooltiptext::after {
-      content: "";
-      position: absolute;
-      top: 100%; /* na base da tooltip */
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: #333 transparent transparent transparent;
-    }
-
-    /* Mostrar tooltip ao passar o mouse */
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
-  </style>
+  <title>🌿🌆 Conexão Campo-Cidade</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="top-banner">
+    <h1>
+      <span class="emoji">🌿</span>
+      Conexão Campo-Cidade
+      <span class="emoji">🌆</span>
+    </h1>
+    <p>Celebrando a união entre o campo e a cidade com respeito e sustentabilidade.</p>
+  </header>
 
-  <h2>Exemplo de Tooltip Personalizado</h2>
+  <main>
+    <section class="topicos">
+      <h2>🌱 Tópicos Importantes</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🌾</div>
+          <p>O campo fornece alimentos e matérias-primas essenciais à cidade.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🏙️</div>
+          <p>A cidade contribui com tecnologia e serviços para o campo crescer.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🤝</div>
+          <p>É preciso valorizar quem trabalha na terra e respeitar os animais.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🌳</div>
+          <p>A sustentabilidade deve ser prioridade em todas as ações.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🐖</div>
+          <p>Animais de criação merecem cuidados adequados e respeito.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⚖️</div>
+          <p>O equilíbrio entre produção rural e urbana é fundamental para o desenvolvimento.</p>
+        </article>
+        <article class="card">
+          <div class="icon">💡</div>
+          <p>Inovações tecnológicas ajudam a melhorar a vida no campo e na cidade.</p>
+        </article>
+      </div>
+    </section>
 
-  <p>
-    Passe o mouse no texto: 
-    <span class="tooltip">Aqui!
-      <span class="tooltiptext">Essa é a legenda que aparece quando passa o mouse.</span>
-    </span>
-  </p>
+    <section class="galeria">
+      <h2>🐖🐓 Galeria</h2>
+      <div class="imagens">
+        <div class="imagem-hover">
+          <img src="https://www.worldanimalprotection.org.br/cdn-cgi/image/width=800,format=auto,fit=cover/siteassets/article/factory_farmed_pigs.jpg" alt="Porcos em cativeiro" />
+          <div class="legenda">Porcos confinados em fazendas industriais</div>
+        </div>
+        <div class="imagem-hover">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMcXTerND-0M04XWyizeuWfAmElSzDg7p8gOpwIXGAxcZ_iYuZLtpxoniEPWWttS6O15A&usqp=CAU" alt="Galinha poedeira" />
+          <div class="legenda">Galinha poedeira em cativeiro</div>
+        </div>
+      </div>
+    </section>
 
+    <section class="depoimentos">
+      <h2>📣 Depoimentos</h2>
+      <blockquote>
+        "Cresci na zona rural e sei o quanto o trabalho no campo exige dedicação e amor. Cada alimento que chega na cidade carrega a história de muita luta." – Carlos, 17 anos, agricultor mirim.
+      </blockquote>
+      <blockquote>
+        "Morar na cidade me fez perceber o quanto dependemos do campo. Valorizar o produtor rural é fundamental para garantir comida de qualidade para todos." – Júlia, 16 anos, estudante.
+      </blockquote>
+      <blockquote>
+        "A sustentabilidade é a chave para o futuro. Preservar a natureza e cuidar dos animais é uma responsabilidade de todos nós, do campo à cidade." – Marcos, 18 anos, voluntário ambiental.
+      </blockquote>
+    </section>
+
+    <section class="opiniao">
+      <h2>📝 Deixe sua opinião</h2>
+      <form id="formOpiniao">
+        <textarea id="textoOpiniao" placeholder="Escreva sua opinião aqui..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="listaOpinioes"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto Agrinho 2025 – Cleverson da Luz Pereira da Cruz – 1F</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('formOpiniao');
+    const lista = document.getElementById('listaOpinioes');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const texto = document.getElementById('textoOpiniao').value.trim();
+      if(texto.length > 0){
+        const novaOpiniao = document.createElement('p');
+        novaOpiniao.textContent = texto;
+        novaOpiniao.classList.add('opiniao-texto');
+        lista.appendChild(novaOpiniao);
+        form.reset();
+      }
+    });
+  </script>
 </body>
 </html>
