@@ -4,8 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
 
@@ -13,7 +11,7 @@ body {
   background: #f9fbf7;
   color: #2e3e1f;
   line-height: 1.6;
-  max-width: 1200px; /* limite para texto */
+  max-width: 1200px;
   margin: 0 auto 40px;
   font-size: 1.15rem;
   padding: 20px;
@@ -34,17 +32,13 @@ body {
   border-radius: 0 0 30px 30px;
   box-shadow: 0 6px 20px rgba(42, 127, 159, 0.45);
   margin-bottom: 40px;
-  user-select: none;
-  font-weight: 600;
-  letter-spacing: 1.4px;
-  margin-top: -20px; /* sobe um pouco */
+  margin-top: -20px;
   z-index: 10;
 }
 
 .top-banner h1 {
   font-size: 3.2rem;
   font-weight: 700;
-  letter-spacing: 3px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +48,6 @@ body {
 .top-banner .emoji {
   font-size: 3.4rem;
   filter: drop-shadow(0 0 3px rgba(0,0,0,0.3));
-  user-select: none;
 }
 
 .top-banner p {
@@ -91,8 +84,6 @@ h2 {
   padding-bottom: 8px;
   font-size: 2.2rem;
   font-weight: 700;
-  letter-spacing: 1px;
-  max-width: fit-content;
 }
 
 /* Cards elegantes para tópicos */
@@ -106,16 +97,14 @@ h2 {
   background: #e8f2e6;
   border-radius: 20px;
   padding: 22px 25px;
-  box-shadow: 0 6px 18px rgba(74, 122, 51, 0.1);
   display: flex;
   align-items: center;
   gap: 18px;
   font-size: 1.18rem;
   font-weight: 600;
   color: #2a5938;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
-  user-select: none;
 }
 
 .card:hover {
@@ -125,7 +114,6 @@ h2 {
 
 .icon {
   font-size: 3.6rem;
-  user-select: none;
   flex-shrink: 0;
 }
 
@@ -142,9 +130,7 @@ h2 {
   border-radius: 22px;
   overflow: hidden;
   max-width: 340px;
-  flex-grow: 1;
   box-shadow: 0 6px 14px rgba(74, 122, 51, 0.12);
-  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -155,109 +141,69 @@ h2 {
 
 .imagem-hover img {
   width: 100%;
-  height: auto;
   display: block;
   border-radius: 22px;
-  user-select: none;
-  pointer-events: none;
 }
 
 .legenda {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(50, 107, 49, 0.85);
-  color: #e4f0e2;
-  padding: 14px 12px;
-  font-size: 1.05rem;
-  font-weight: 600;
   text-align: center;
-  user-select: none;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #3b5436;
 }
 
-/* Depoimentos estilo bloco */
+/* Depoimentos */
 .depoimentos blockquote {
-  background: #d9f1c9;
-  border-left: 7px solid #4a7e29;
-  padding: 22px 28px;
-  font-style: italic;
-  font-weight: 500;
-  color: #2d4e1c;
-  margin-bottom: 30px;
+  background: #f0f7ee;
+  padding: 18px 22px;
+  border-left: 5px solid #6eaa4d;
   border-radius: 12px;
-  user-select: none;
-  line-height: 1.5;
+  margin-bottom: 18px;
+  font-style: italic;
+  color: #365032;
 }
 
-/* Nova seção: opinião */
-
+/* Formulário de opinião */
 .opiniao textarea {
   width: 100%;
-  min-height: 120px;
-  border-radius: 16px;
-  border: 2px solid #7aaa3d;
-  padding: 14px 20px;
-  font-size: 1.15rem;
-  font-family: inherit;
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #bcd7af;
+  margin-bottom: 10px;
   resize: vertical;
-  transition: border-color 0.3s ease;
-}
-
-.opiniao textarea:focus {
-  outline: none;
-  border-color: #326b31;
-  background: #e6f0d7;
 }
 
 .opiniao button {
-  background: #4a7e29;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4a9a51;
+  color: white;
   border: none;
-  color: #f0f6d2;
-  font-size: 1.2rem;
-  padding: 14px 28px;
-  margin-top: 15px;
-  border-radius: 20px;
+  border-radius: 12px;
   cursor: pointer;
-  font-weight: 700;
-  box-shadow: 0 5px 14px rgba(74, 122, 41, 0.6);
-  user-select: none;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .opiniao button:hover {
-  background: #326b31;
-}
-
-#listaOpinioes {
-  margin-top: 30px;
-  background: #f0f6d2;
-  border-radius: 18px;
-  padding: 20px 25px;
-  box-shadow: inset 0 3px 8px rgba(50, 107, 49, 0.15);
-  max-height: 300px;
-  overflow-y: auto;
-  user-select: none;
+  background-color: #3a7a40;
 }
 
 .opiniao-texto {
-  background: #cee4bb;
-  margin-bottom: 14px;
-  padding: 14px 20px;
-  border-radius: 14px;
-  box-shadow: 0 3px 8px rgba(74, 122, 51, 0.12);
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #2a5938;
+  background-color: #f0f7f0;
+  padding: 12px;
+  margin-top: 10px;
+  border-left: 4px solid #5fa34c;
+  border-radius: 8px;
 }
 
 /* Rodapé */
 footer {
   text-align: center;
+  padding: 20px;
+  color: #6a865c;
   font-size: 1rem;
-  color: #7a8e5e;
-  font-style: italic;
-  margin-top: 25px;
-  user-select: none;
+  border-top: 1px solid #d5e5d0;
 }
 
 /* Responsividade */
@@ -265,7 +211,6 @@ footer {
   .topicos .cards {
     grid-template-columns: 1fr;
   }
-
   .galeria .imagens {
     flex-direction: column;
   }

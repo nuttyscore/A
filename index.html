@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>🌿🌆 Conexão Campo-Cidade</title>
+  <!-- Adicione aqui o favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Link para seu CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -52,7 +56,7 @@
     </section>
 
     <section class="galeria">
-      <h2>🐖 Galeria 🐓</h2>
+      <h2>🐖🐓 Galeria</h2>
       <div class="imagens">
         <div class="imagem-hover">
           <img src="https://www.worldanimalprotection.org.br/cdn-cgi/image/width=800,format=auto,fit=cover/siteassets/article/factory_farmed_pigs.jpg" alt="Porcos em cativeiro" />
@@ -66,7 +70,7 @@
     </section>
 
     <section class="depoimentos">
-      <h2>📣 Depoimentos </h2>
+      <h2>📣 Depoimentos</h2>
       <blockquote>
         "Cresci na zona rural e sei o quanto o trabalho no campo exige dedicação e amor. Cada alimento que chega na cidade carrega a história de muita luta." – Carlos, 17 anos, agricultor mirim.
       </blockquote>
@@ -78,7 +82,6 @@
       </blockquote>
     </section>
 
-    <!-- Nova seção com caixa de opiniões -->
     <section class="opiniao">
       <h2>📝 Deixe sua opinião</h2>
       <form id="formOpiniao">
@@ -90,7 +93,7 @@
   </main>
 
   <footer>
-    <p>Projeto Agrinho 2025 – Cleverson da Cruz – 2B</p>
+    <p>Projeto Agrinho 2025 – Cleverson da Luz Pereira da Cruz – 1F</p>
   </footer>
 
   <script>
@@ -99,7 +102,7 @@
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       const texto = document.getElementById('textoOpiniao').value.trim();
-      if(texto.length > 0){
+      if (texto.length > 0) {
         const novaOpiniao = document.createElement('p');
         novaOpiniao.textContent = texto;
         novaOpiniao.classList.add('opiniao-texto');
@@ -109,4 +112,4 @@
     });
   </script>
 </body>
-</html> 
+</html>
