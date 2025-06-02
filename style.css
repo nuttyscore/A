@@ -1,237 +1,108 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-}
-
+/* Geral */
 body {
-  background: #f9fbf7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f6f9f4;
   color: #2e3e1f;
-  line-height: 1.6;
-  max-width: 1200px; /* limite para texto */
-  margin: 0 auto 40px;
-  font-size: 1.15rem;
-  padding: 20px;
+  margin: 0;
+  padding: 40px 15px;
 }
 
-/* FAIXA NO TOPO - LARGURA TOTAL + UM POUCO MAIS PARA CIMA */
-.top-banner {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  background: linear-gradient(135deg, #2a7f9f, #4a9a51);
-  padding: 30px 20px 40px;
-  text-align: center;
-  color: #e6f0ea;
-  border-radius: 0 0 30px 30px;
-  box-shadow: 0 6px 20px rgba(42, 127, 159, 0.45);
-  margin-bottom: 40px;
-  user-select: none;
-  font-weight: 600;
-  letter-spacing: 1.4px;
-  margin-top: -20px; /* sobe um pouco */
-  z-index: 10;
+main {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.top-banner h1 {
-  font-size: 3.2rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-}
-
-.top-banner .emoji {
-  font-size: 3.4rem;
-  filter: drop-shadow(0 0 3px rgba(0,0,0,0.3));
-  user-select: none;
-}
-
-.top-banner p {
-  font-size: 1.4rem;
-  font-style: italic;
-  font-weight: 500;
-  margin-top: 12px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #cde3ca;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
-}
-
-/* Seções com fundo branco e sombra elegante */
-section {
-  background: #fff;
+/* Depoimentos */
+.depoimentos {
+  background: #eaf3e8;
   padding: 30px 35px;
   border-radius: 22px;
   box-shadow: 0 8px 18px rgba(74, 122, 51, 0.14);
   margin-bottom: 50px;
-  transition: box-shadow 0.3s ease;
 }
 
-section:hover {
-  box-shadow: 0 12px 28px rgba(74, 122, 51, 0.28);
-}
-
-/* Títulos das seções */
-h2 {
+.depoimentos h2 {
   color: #326b31;
   margin-bottom: 28px;
   border-bottom: 3px solid #69a84f;
   padding-bottom: 8px;
   font-size: 2.2rem;
   font-weight: 700;
-  letter-spacing: 1px;
-  max-width: fit-content;
 }
 
-/* Cards elegantes para tópicos */
-.topicos .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
+.depoimentos p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #4a7541;
 }
 
-.card {
-  background: #e8f2e6;
-  border-radius: 20px;
-  padding: 22px 25px;
-  box-shadow: 0 6px 18px rgba(74, 122, 51, 0.1);
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  font-size: 1.18rem;
+/* Mais Informações */
+.mais-informacoes {
+  background: #e6f0ea;
+  padding: 30px 35px;
+  border-radius: 22px;
+  box-shadow: 0 8px 18px rgba(74, 122, 51, 0.14);
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Caixa de Opiniões */
+.opiniao {
+  background: #fff;
+  padding: 30px 35px;
+  border-radius: 22px;
+  box-shadow: 0 8px 18px rgba(74, 122, 51, 0.14);
+  margin-bottom: 50px;
+}
+
+.opiniao h2 {
+  color: #326b31;
+  margin-bottom: 28px;
+  border-bottom: 3px solid #69a84f;
+  padding-bottom: 8px;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.opiniao form label {
   font-weight: 600;
   color: #2a5938;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
-  cursor: default;
 }
 
-.card:hover {
-  background: #d2e7ca;
-  box-shadow: 0 12px 30px rgba(74, 122, 51, 0.22);
-}
-
-.card .icon {
-  font-size: 2.6rem;
-  user-select: none;
-  flex-shrink: 0;
-}
-
-/* Galeria */
-.galeria .imagens {
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.imagem-hover {
-  position: relative;
-  width: 320px;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  background: #f9fdf9;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.imagem-hover:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 28px rgba(0, 0, 0, 0.15);
-}
-
-.imagem-hover img {
-  display: block;
+.opiniao form input[type="text"],
+.opiniao form textarea {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-}
-
-.imagem-hover:hover img {
-  transform: scale(1.1);
-}
-
-.legenda {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(50, 135, 90, 0.85);
-  color: #e6f0ea;
-  padding: 15px 20px;
-  font-size: 1.1rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 0 0 20px 20px;
-  text-align: center;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-.imagem-hover:hover .legenda {
-  opacity: 1;
-}
-
-/* Depoimentos */
-.depoimentos blockquote {
-  font-style: italic;
-  color: #3d3d3d;
-  border-left: 5px solid #4a9a51;
-  padding-left: 18px;
-  margin: 18px 0;
-  font-weight: 600;
-  font-size: 1.2rem;
-  max-width: 800px;
-  user-select: none;
-  line-height: 1.5;
-  background: #f4f9f3;
+  padding: 12px 15px;
+  margin-top: 6px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(74, 122, 81, 0.1);
-}
-
-/* Rodapé */
-footer {
-  text-align: center;
+  border: 2px solid #69a84f;
   font-size: 1.1rem;
-  color: #617a4d;
-  padding: 18px 10px 8px;
-  border-top: 2px solid #a1bf86;
-  user-select: none;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  resize: vertical;
+  transition: border-color 0.3s ease;
 }
 
-/* Responsividade para telas pequenas */
-@media (max-width: 600px) {
-  body {
-    padding: 15px 10px;
-    font-size: 1rem;
-  }
+.opiniao form input[type="text"]:focus,
+.opiniao form textarea:focus {
+  border-color: #4a7541;
+  outline: none;
+}
 
-  .top-banner h1 {
-    font-size: 2.3rem;
-  }
+.opiniao form button {
+  background-color: #4a7541;
+  color: #e6f0ea;
+  font-weight: 700;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.15rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
 
-  .topicos .cards {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .imagem-hover {
-    width: 100%;
-  }
+.opiniao form button:hover {
+  background-color: #326b31;
 }
