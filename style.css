@@ -4,6 +4,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
 
@@ -17,7 +19,7 @@ body {
   padding: 20px;
 }
 
-/* FAIXA NO TOPO - LARGURA TOTAL + UM POUCO MAIS PARA CIMA */
+/* FAIXA NO TOPO */
 .top-banner {
   position: relative;
   left: 50%;
@@ -32,6 +34,9 @@ body {
   border-radius: 0 0 30px 30px;
   box-shadow: 0 6px 20px rgba(42, 127, 159, 0.45);
   margin-bottom: 40px;
+  user-select: none;
+  font-weight: 600;
+  letter-spacing: 1.4px;
   margin-top: -20px;
   z-index: 10;
 }
@@ -39,6 +44,7 @@ body {
 .top-banner h1 {
   font-size: 3.2rem;
   font-weight: 700;
+  letter-spacing: 3px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -48,6 +54,7 @@ body {
 .top-banner .emoji {
   font-size: 3.4rem;
   filter: drop-shadow(0 0 3px rgba(0,0,0,0.3));
+  user-select: none;
 }
 
 .top-banner p {
@@ -62,7 +69,7 @@ body {
   text-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
-/* Seções com fundo branco e sombra elegante */
+/* Seções com fundo branco e sombra */
 section {
   background: #fff;
   padding: 30px 35px;
@@ -76,7 +83,7 @@ section:hover {
   box-shadow: 0 12px 28px rgba(74, 122, 51, 0.28);
 }
 
-/* Títulos das seções */
+/* Títulos */
 h2 {
   color: #326b31;
   margin-bottom: 28px;
@@ -84,9 +91,11 @@ h2 {
   padding-bottom: 8px;
   font-size: 2.2rem;
   font-weight: 700;
+  letter-spacing: 1px;
+  max-width: fit-content;
 }
 
-/* Cards elegantes para tópicos */
+/* Cards */
 .topicos .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -97,121 +106,173 @@ h2 {
   background: #e8f2e6;
   border-radius: 20px;
   padding: 22px 25px;
+  box-shadow: 0 6px 18px rgba(74, 122, 51, 0.1);
   display: flex;
   align-items: center;
   gap: 18px;
   font-size: 1.18rem;
   font-weight: 600;
-  color: #2a5938;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
+  color: #2c5534;
+  user-select: none;
+  transition: background 0.25s ease;
 }
 
 .card:hover {
-  background: #cee4bb;
-  box-shadow: 0 10px 26px rgba(74, 122, 51, 0.2);
+  background: #ccddb3;
 }
 
+/* Ícone dentro do card */
 .icon {
-  font-size: 3.6rem;
-  flex-shrink: 0;
+  font-size: 2.8rem;
+  user-select: none;
+  color: #3f6d26;
 }
 
-/* Galeria de imagens com hover */
+/* Galeria */
 .galeria .imagens {
   display: flex;
-  gap: 25px;
-  justify-content: center;
   flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
 }
 
 .imagem-hover {
   position: relative;
-  border-radius: 22px;
+  border-radius: 18px;
   overflow: hidden;
-  max-width: 340px;
-  box-shadow: 0 6px 14px rgba(74, 122, 51, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 380px;
+  box-shadow: 0 6px 20px rgba(42, 127, 159, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.imagem-hover img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  user-select: none;
 }
 
 .imagem-hover:hover {
   transform: scale(1.08);
-  box-shadow: 0 14px 36px rgba(74, 122, 51, 0.25);
-}
-
-.imagem-hover img {
-  width: 100%;
-  display: block;
-  border-radius: 22px;
+  z-index: 5;
 }
 
 .legenda {
-  text-align: center;
-  font-size: 1rem;
-  margin-top: 10px;
-  color: #3b5436;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(50, 107, 49, 0.85);
+  color: #d2e3b8;
+  padding: 14px 20px;
+  font-size: 1.06rem;
+  font-weight: 600;
+  user-select: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.imagem-hover:hover .legenda {
+  opacity: 1;
 }
 
 /* Depoimentos */
 .depoimentos blockquote {
-  background: #f0f7ee;
-  padding: 18px 22px;
-  border-left: 5px solid #6eaa4d;
-  border-radius: 12px;
-  margin-bottom: 18px;
   font-style: italic;
-  color: #365032;
+  font-weight: 600;
+  background: #e3f1d6;
+  padding: 18px 28px;
+  border-left: 7px solid #4a9a51;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  color: #395929;
+  user-select: text;
+  transition: background-color 0.3s ease;
 }
 
-/* Formulário de opinião */
+.depoimentos blockquote:hover {
+  background: #c5e5a2;
+}
+
+/* Opinião */
 .opiniao textarea {
   width: 100%;
-  padding: 15px;
-  font-size: 1rem;
-  border-radius: 12px;
-  border: 1px solid #bcd7af;
-  margin-bottom: 10px;
+  min-height: 110px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 2.6px solid #4a9a51;
+  font-size: 1.15rem;
+  font-weight: 500;
   resize: vertical;
+  outline-offset: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: border-color 0.25s ease;
+}
+
+.opiniao textarea:focus {
+  border-color: #326b31;
 }
 
 .opiniao button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #4a9a51;
-  color: white;
+  margin-top: 14px;
+  padding: 12px 24px;
+  background: #2a7f9f;
+  color: #e6f0ea;
+  font-size: 1.2rem;
+  font-weight: 700;
   border: none;
-  border-radius: 12px;
+  border-radius: 18px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.25s ease;
 }
 
 .opiniao button:hover {
-  background-color: #3a7a40;
+  background: #235e72;
+}
+
+#listaOpinioes {
+  margin-top: 22px;
+  font-style: italic;
+  color: #42672e;
 }
 
 .opiniao-texto {
-  background-color: #f0f7f0;
-  padding: 12px;
-  margin-top: 10px;
-  border-left: 4px solid #5fa34c;
-  border-radius: 8px;
+  background: #d9e6c6;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(50,107,49,0.15);
 }
 
-/* Rodapé */
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  color: #6a865c;
+  color: #597750;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  padding: 16px 0 10px;
+  user-select: none;
   font-size: 1rem;
-  border-top: 1px solid #d5e5d0;
 }
 
 /* Responsividade */
-@media (max-width: 650px) {
-  .topicos .cards {
-    grid-template-columns: 1fr;
+@media (max-width: 780px) {
+  .top-banner h1 {
+    font-size: 2.5rem;
+    gap: 15px;
   }
-  .galeria .imagens {
-    flex-direction: column;
+
+  .card {
+    font-size: 1.04rem;
+  }
+
+  .imagem-hover img {
+    height: 180px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
   }
 }

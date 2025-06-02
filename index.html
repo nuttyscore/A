@@ -4,10 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>🌿🌆 Conexão Campo-Cidade</title>
-  <!-- Adicione aqui o favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-
-  <!-- Link para seu CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -70,7 +66,7 @@
     </section>
 
     <section class="depoimentos">
-      <h2>📣 Depoimentos</h2>
+      <h2>📣 Depoimentos </h2>
       <blockquote>
         "Cresci na zona rural e sei o quanto o trabalho no campo exige dedicação e amor. Cada alimento que chega na cidade carrega a história de muita luta." – Carlos, 17 anos, agricultor mirim.
       </blockquote>
@@ -102,7 +98,7 @@
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       const texto = document.getElementById('textoOpiniao').value.trim();
-      if (texto.length > 0) {
+      if(texto.length > 0){
         const novaOpiniao = document.createElement('p');
         novaOpiniao.textContent = texto;
         novaOpiniao.classList.add('opiniao-texto');
